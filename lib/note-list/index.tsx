@@ -379,7 +379,7 @@ export class NoteList extends Component<Props> {
     if (
       cmdOrCtrl &&
       shiftKey &&
-      (key === 'ArrowUp' || key === 'k' || key === 'K')
+      (key === 'ArrowUp' || key.toLowerCase() === 'k')
     ) {
       this.props.onSelectNote(this.props.nextNote.id);
 
@@ -391,7 +391,7 @@ export class NoteList extends Component<Props> {
     if (
       cmdOrCtrl &&
       shiftKey &&
-      (key === 'ArrowDown' || key === 'j' || key === 'J')
+      (key === 'ArrowDown' || key.toLowerCase() === 'j')
     ) {
       this.props.onSelectNote(this.props.prevNote.id);
 
